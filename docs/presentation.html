@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinMate - Final Project Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0f1117;
+            color: #f1f5f9;
+            overflow: hidden;
+            height: 100vh;
+        }
+        .slide {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            padding: 60px 80px;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .slide.active { display: flex; }
+        
+        /* Title slide */
+        .slide-title { text-align: center; align-items: center; }
+        .slide-title h1 { font-size: 4.5rem; font-weight: 800; background: linear-gradient(135deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .slide-title .subtitle { font-size: 1.5rem; color: #94a3b8; margin-top: 12px; }
+        .slide-title .meta { font-size: 0.95rem; color: #64748b; margin-top: 40px; }
+        
+        /* Content slides */
+        h2 { font-size: 2.2rem; font-weight: 700; margin-bottom: 32px; color: #f1f5f9; }
+        h2 .accent { color: #818cf8; }
+        h3 { font-size: 1.3rem; font-weight: 600; color: #a5b4fc; margin: 20px 0 12px; }
+        p { font-size: 1.1rem; line-height: 1.7; color: #cbd5e1; margin-bottom: 12px; }
+        ul { list-style: none; padding: 0; }
+        ul li { font-size: 1.05rem; line-height: 1.8; color: #cbd5e1; padding-left: 24px; position: relative; }
+        ul li::before { content: '→'; position: absolute; left: 0; color: #818cf8; font-weight: 600; }
+        .highlight { color: #a5b4fc; font-weight: 600; }
+        .stat { color: #10b981; font-weight: 700; }
+        
+        /* Grid layouts */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-top: 20px; }
+        
+        /* Cards */
+        .card { background: #1e2235; border: 1px solid #2a2f45; border-radius: 16px; padding: 24px; }
+        .card h4 { font-size: 1rem; font-weight: 600; color: #a5b4fc; margin-bottom: 8px; }
+        .card p { font-size: 0.9rem; color: #94a3b8; }
+        
+        /* Table */
+        table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+        th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #2a2f45; }
+        th { font-size: 0.85rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+        td { font-size: 1rem; color: #cbd5e1; }
+        td:last-child { color: #a5b4fc; font-weight: 500; }
+        
+        /* Code block */
+        .arch-block { background: #1a1d2e; border: 1px solid #2a2f45; border-radius: 12px; padding: 24px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; line-height: 1.8; color: #94a3b8; white-space: pre; overflow-x: auto; }
+        .arch-block .node { color: #818cf8; }
+        .arch-block .arrow { color: #6366f1; }
+        .arch-block .label { color: #10b981; }
+        
+        /* Navigation */
+        .nav { position: fixed; bottom: 30px; right: 40px; display: flex; gap: 12px; z-index: 100; }
+        .nav button { width: 44px; height: 44px; border-radius: 12px; border: 1px solid #2a2f45; background: #1e2235; color: #94a3b8; font-size: 1.2rem; cursor: pointer; transition: all 0.2s; }
+        .nav button:hover { background: #2a2f45; color: white; }
+        .progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #6366f1, #a855f7); transition: width 0.3s; }
+        .slide-num { position: fixed; bottom: 34px; left: 40px; font-size: 0.85rem; color: #64748b; }
+        
+        /* Big metric */
+        .metric-big { text-align: center; padding: 20px; }
+        .metric-big .value { font-size: 3rem; font-weight: 800; color: #10b981; }
+        .metric-big .label { font-size: 0.9rem; color: #64748b; margin-top: 4px; }
+        
+        /* Quote/callout */
+        .callout { background: linear-gradient(135deg, #1e1b4b, #1e2235); border: 1px solid #3730a3; border-radius: 16px; padding: 24px 32px; margin: 20px 0; font-size: 1.2rem; color: #c7d2fe; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<div class="slide slide-title active">
+    <h1>FinMate</h1>
+    <p class="subtitle">AI-Powered Personal Finance Assistant</p>
+    <p class="meta">LLM Engineering Course — Final Project | May 2026<br><br>github.com/kassymashim/finmate</p>
+</div>
+
+<!-- Slide 2: Problem -->
+<div class="slide">
+    <h2>The <span class="accent">Problem</span></h2>
+    <div class="callout">"65% of people don't know how much they spent last month."</div>
+    <div class="grid-2" style="margin-top: 30px;">
+        <div>
+            <h3>Pain Points</h3>
+            <ul>
+                <li>Manual expense tracking is tedious → people give up</li>
+                <li>Banking apps show data but don't explain patterns</li>
+                <li>Generic budgeting advice ignores individual context</li>
+                <li>Financial advisors are expensive ($150-300/hour)</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Current Alternatives</h3>
+            <ul>
+                <li>Spreadsheets — boring, requires discipline</li>
+                <li>Banking apps — raw data, no guidance</li>
+                <li>Budgeting apps — rules without personalization</li>
+                <li>Financial advisors — costly, inaccessible</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 3: Solution -->
+<div class="slide">
+    <h2>The <span class="accent">Solution</span> — FinMate</h2>
+    <p style="font-size: 1.3rem; color: #e2e8f0; margin-bottom: 30px;">An AI assistant that turns transaction data into <span class="highlight">personalized, actionable financial advice.</span></p>
+    <div class="grid-3">
+        <div class="card">
+            <h4>📊 Smart Dashboard</h4>
+            <p>Visual spending analytics with category breakdowns, trends, and monthly comparisons</p>
+        </div>
+        <div class="card">
+            <h4>💬 AI Advisor</h4>
+            <p>Conversational chat that knows YOUR spending patterns and gives personalized advice</p>
+        </div>
+        <div class="card">
+            <h4>⚡ Quick Logging</h4>
+            <p>Type "Chipotle $15" → instant categorization and dashboard update</p>
+        </div>
+        <div class="card">
+            <h4>📷 Receipt OCR</h4>
+            <p>Photo receipts analyzed by GPT-4o Vision — auto-extracted and categorized</p>
+        </div>
+        <div class="card">
+            <h4>🎯 Goal Planning</h4>
+            <p>Milestone-based savings plans with timelines and action items</p>
+        </div>
+        <div class="card">
+            <h4>🛡️ Privacy First</h4>
+            <p>PII auto-masking, prompt injection detection, domain guardrails</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 4: Demo -->
+<div class="slide" style="align-items: center; text-align: center;">
+    <h2>Live <span class="accent">Demo</span></h2>
+    <div style="margin-top: 20px;">
+        <div class="grid-2" style="max-width: 800px; text-align: left;">
+            <div class="card">
+                <h4>Demo Flow</h4>
+                <ul>
+                    <li>Dashboard — spending breakdown</li>
+                    <li>Month filter — compare periods</li>
+                    <li>Quick add — "Starbucks $6"</li>
+                    <li>AI Chat — spending analysis</li>
+                    <li>AI Chat — savings plan</li>
+                    <li>LangSmith — real traces</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h4>Key Questions to Answer</h4>
+                <ul>
+                    <li>"Where is my money going?"</li>
+                    <li>"How can I save $15,000?"</li>
+                    <li>"Am I overspending on food?"</li>
+                    <li>"Create a budget for me"</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 5: Architecture -->
+<div class="slide">
+    <h2><span class="accent">Architecture</span> Overview</h2>
+    <div class="arch-block"><span class="node">User</span> <span class="arrow">→</span> <span class="node">Next.js Frontend</span> <span class="arrow">→</span> <span class="node">FastAPI Backend</span>
+                                        <span class="arrow">↓</span>
+                            <span class="label">Guardrails</span> (PII filter, injection detection)
+                                        <span class="arrow">↓</span>
+                            <span class="node">LangGraph Orchestration</span>
+                            <span class="arrow">├──</span> <span class="label">Classify Intent</span> (GPT-4o, temp=0)
+                            <span class="arrow">├──</span> <span class="label">Retrieve Context</span> (ChromaDB RAG, MMR)
+                            <span class="arrow">└──</span> <span class="label">Route to Specialist:</span>
+                                <span class="arrow">├──</span> Budget Analysis
+                                <span class="arrow">├──</span> Savings Advice
+                                <span class="arrow">├──</span> Spending Insights
+                                <span class="arrow">├──</span> Goal Setting <span class="label">(human-in-the-loop)</span>
+                                <span class="arrow">└──</span> General Q&A
+                                        <span class="arrow">↓</span>
+                            <span class="node">LangSmith</span> <span class="label">(tracing all calls)</span></div>
+</div>
+
+<!-- Slide 6: LangGraph -->
+<div class="slide">
+    <h2><span class="accent">LangGraph</span> Workflow</h2>
+    <div class="grid-2">
+        <div>
+            <h3>Why LangGraph?</h3>
+            <ul>
+                <li>Granular control over routing logic</li>
+                <li>Native conditional edges + state management</li>
+                <li>Single-agent, multiple-roles pattern</li>
+                <li>Explicit graph = easier debugging</li>
+                <li>Considered CrewAI — too much overhead for our use case</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Multi-step Flow</h3>
+            <ul>
+                <li><span class="highlight">Step 1:</span> Intent Classification (5 categories)</li>
+                <li><span class="highlight">Step 2:</span> RAG Retrieval (enhanced query)</li>
+                <li><span class="highlight">Step 3:</span> Conditional Routing (5 specialist nodes)</li>
+                <li><span class="highlight">Step 4:</span> Response Generation (context-aware)</li>
+                <li><span class="highlight">Step 5:</span> Human-in-the-loop (goal confirmation)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 7: RAG + MCP -->
+<div class="slide">
+    <h2><span class="accent">RAG Pipeline</span> & MCP Server</h2>
+    <div class="grid-2">
+        <div>
+            <h3>RAG Pipeline</h3>
+            <ul>
+                <li><span class="highlight">Knowledge:</span> 4 curated finance documents</li>
+                <li><span class="highlight">Chunking:</span> 800 chars, 200 overlap, MD-aware</li>
+                <li><span class="highlight">Embeddings:</span> text-embedding-3-small</li>
+                <li><span class="highlight">Vector DB:</span> ChromaDB (local, persistent)</li>
+                <li><span class="highlight">Retrieval:</span> MMR (λ=0.7) for diversity</li>
+                <li><span class="highlight">Why ChromaDB:</span> Zero cost, sufficient scale</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Custom MCP Server (3 Tools)</h3>
+            <div class="card" style="margin-bottom: 12px;">
+                <h4>categorize_expenses</h4>
+                <p>Auto-categorize transactions by merchant keywords</p>
+            </div>
+            <div class="card" style="margin-bottom: 12px;">
+                <h4>calculate_budget</h4>
+                <p>50/30/20 allocation with personalized adjustments</p>
+            </div>
+            <div class="card">
+                <h4>get_savings_plan</h4>
+                <p>Milestone-based plan with timeline and actions</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 8: Multimodality -->
+<div class="slide">
+    <h2><span class="accent">Multimodality</span> & Guardrails</h2>
+    <div class="grid-2">
+        <div>
+            <h3>GPT-4o Vision — Receipt OCR</h3>
+            <ul>
+                <li>Upload receipt/bank statement photo</li>
+                <li>Extracts: merchant, date, items, total</li>
+                <li>Auto-categorizes the expense</li>
+                <li>Structured JSON output for dashboard</li>
+                <li>Supports receipts, invoices, statements</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Guardrails (Bonus)</h3>
+            <ul>
+                <li><span class="highlight">PII Detection:</span> Credit cards, SSNs auto-masked</li>
+                <li><span class="highlight">Injection Detection:</span> Blocks prompt overrides</li>
+                <li><span class="highlight">Domain Enforcement:</span> Stays within finance</li>
+                <li><span class="highlight">Output Validation:</span> Adds disclaimers when needed</li>
+            </ul>
+            <p style="margin-top: 16px; font-size: 0.9rem; color: #64748b;">Example: "My card is 4532-1234-5678-9012" → masked to "****-****-****-XXXX"</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 9: Evals -->
+<div class="slide">
+    <h2><span class="accent">Evaluation</span> Results</h2>
+    <p>Golden Dataset: <span class="highlight">35 examples</span> across 5 intent categories</p>
+    <div class="grid-3" style="margin-top: 24px;">
+        <div class="metric-big">
+            <div class="value">80%</div>
+            <div class="label">Intent Accuracy</div>
+        </div>
+        <div class="metric-big">
+            <div class="value">3.93/5</div>
+            <div class="label">Response Relevance</div>
+        </div>
+        <div class="metric-big">
+            <div class="value">92.2%</div>
+            <div class="label">Keyword Faithfulness</div>
+        </div>
+    </div>
+    <div style="margin-top: 30px;">
+        <h3>A/B Test: GPT-4o vs GPT-4o-mini</h3>
+        <table>
+            <tr><th>Metric</th><th>GPT-4o</th><th>GPT-4o-mini</th><th>Winner</th></tr>
+            <tr><td>Intent Accuracy</td><td>80%</td><td>~72%</td><td>GPT-4o</td></tr>
+            <tr><td>Latency</td><td>5.56s</td><td>~2.8s</td><td>GPT-4o-mini</td></tr>
+            <tr><td>Cost per query</td><td>$0.01</td><td>$0.001</td><td>GPT-4o-mini</td></tr>
+        </table>
+        <p style="margin-top: 12px;"><span class="highlight">Decision:</span> GPT-4o for responses (quality), GPT-4o-mini for intent classification (speed/cost)</p>
+    </div>
+</div>
+
+<!-- Slide 10: Hyperparameters -->
+<div class="slide">
+    <h2><span class="accent">LLM Choice</span> & Hyperparameters</h2>
+    <div class="grid-2">
+        <div>
+            <h3>Why GPT-4o?</h3>
+            <ul>
+                <li>Best vision capabilities (receipt OCR)</li>
+                <li>Superior instruction following</li>
+                <li>Consistent structured JSON output</li>
+                <li>Acceptable latency for chat (~5.5s)</li>
+                <li>Fallback: GPT-4o-mini if rate limited</li>
+            </ul>
+            <h3 style="margin-top: 24px;">Cost Analysis</h3>
+            <ul>
+                <li>~$0.01 per user query</li>
+                <li>~$0.001 for intent classification alone</li>
+                <li>Semantic caching could reduce by 40%</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Hyperparameter Experiments</h3>
+            <table>
+                <tr><th>Param</th><th>Tested</th><th>Selected</th></tr>
+                <tr><td>Temperature</td><td>0, 0.3, 0.7, 1.0</td><td><span class="stat">0.3</span></td></tr>
+                <tr><td>Top-P</td><td>0.8, 0.9, 1.0</td><td><span class="stat">0.9</span></td></tr>
+                <tr><td>Max Tokens</td><td>1024, 2048, 4096</td><td><span class="stat">2048</span></td></tr>
+            </table>
+            <p style="margin-top: 16px;"><span class="highlight">Temperature 0.3:</span> Consistent yet natural. 0.0 was too repetitive, 0.7 hallucinated numbers.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 11: Monitoring -->
+<div class="slide">
+    <h2><span class="accent">LangSmith</span> Monitoring</h2>
+    <div class="grid-2">
+        <div>
+            <h3>What We Track</h3>
+            <ul>
+                <li>Every LLM call (intent, RAG, generation)</li>
+                <li>End-to-end latency per request</li>
+                <li>Token consumption (input/output)</li>
+                <li>Error rates and failure modes</li>
+                <li>Cost per conversation</li>
+                <li>Full trace of multi-step workflows</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Insights from Traces</h3>
+            <ul>
+                <li>Intent classification: ~0.8s (fast)</li>
+                <li>RAG retrieval: ~0.3s (local DB)</li>
+                <li>Response generation: ~4s (main bottleneck)</li>
+                <li>Total: ~5.5s average</li>
+                <li>No failed calls in evaluation run</li>
+            </ul>
+            <p style="margin-top: 16px; font-style: italic; color: #64748b;">[Live dashboard demo during Q&A]</p>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 12: Design Decisions -->
+<div class="slide">
+    <h2>Key <span class="accent">Trade-offs</span></h2>
+    <table>
+        <tr><th>Decision</th><th>Rationale</th><th>Trade-off</th></tr>
+        <tr><td>LangGraph over CrewAI</td><td>Granular routing control</td><td>More boilerplate</td></tr>
+        <tr><td>ChromaDB over Pinecone</td><td>Zero cost, local</td><td>Not production-scalable</td></tr>
+        <tr><td>GPT-4o over Claude</td><td>Better vision + JSON</td><td>Higher cost/call</td></tr>
+        <tr><td>Next.js over Streamlit</td><td>Professional UI</td><td>Longer development</td></tr>
+        <tr><td>800-char chunks</td><td>Context vs precision balance</td><td>May split sections</td></tr>
+    </table>
+    <h3 style="margin-top: 30px;">Hypotheses That Didn't Hold</h3>
+    <ul>
+        <li>"GPT-4o-mini is good enough for everything" → Quality dropped for financial advice</li>
+        <li>"Users always ask clear questions" → Needed robust intent handling for ambiguous queries</li>
+    </ul>
+</div>
+
+<!-- Slide 13: Summary -->
+<div class="slide">
+    <h2><span class="accent">Summary</span></h2>
+    <div class="callout" style="margin-bottom: 30px;">FinMate turns transaction data into personalized, actionable financial advice through AI.</div>
+    <div class="grid-2">
+        <div>
+            <h3>Technical Highlights</h3>
+            <ul>
+                <li>LangGraph workflow — 5 specialist nodes</li>
+                <li>RAG grounded in curated knowledge</li>
+                <li>GPT-4o Vision for receipt OCR</li>
+                <li>Custom MCP server (3 tools)</li>
+                <li>80% intent accuracy, 3.93/5 relevance</li>
+                <li>Full LangSmith observability</li>
+                <li>PII guardrails + injection protection</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Target User</h3>
+            <p>Young professionals (25-35) who want to manage money better but find traditional budgeting boring.</p>
+            <h3 style="margin-top: 20px;">Future Vision</h3>
+            <ul>
+                <li>Real bank API (Plaid) integration</li>
+                <li>Voice interface</li>
+                <li>Mobile app</li>
+                <li>Multi-user with auth</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Slide 14: Q&A -->
+<div class="slide slide-title">
+    <h1>Q&A</h1>
+    <p class="subtitle">Thank you!</p>
+    <p class="meta">github.com/kassymashim/finmate</p>
+</div>
+
+<!-- Navigation -->
+<div class="progress" id="progress"></div>
+<div class="slide-num" id="slideNum">1 / 14</div>
+<div class="nav">
+    <button onclick="prevSlide()">←</button>
+    <button onclick="nextSlide()">→</button>
+</div>
+
+<script>
+    let current = 0;
+    const slides = document.querySelectorAll('.slide');
+    const total = slides.length;
+
+    function showSlide(n) {
+        slides[current].classList.remove('active');
+        current = (n + total) % total;
+        slides[current].classList.add('active');
+        document.getElementById('progress').style.width = ((current + 1) / total * 100) + '%';
+        document.getElementById('slideNum').textContent = (current + 1) + ' / ' + total;
+    }
+
+    function nextSlide() { showSlide(current + 1); }
+    function prevSlide() { showSlide(current - 1); }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+    });
+
+    // Touch support
+    let touchStartX = 0;
+    document.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; });
+    document.addEventListener('touchend', (e) => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) { diff > 0 ? nextSlide() : prevSlide(); }
+    });
+</script>
+</body>
+</html>
