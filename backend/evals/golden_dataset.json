@@ -1,0 +1,247 @@
+[
+  {
+    "id": 1,
+    "query": "What percentage of my income am I spending on dining out?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["restaurant", "dining", "percent"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 2,
+    "query": "How should I budget my $5,800 monthly salary?",
+    "expected_intent": "budget_analysis",
+    "expected_contains": ["50/30/20", "needs", "wants", "savings"],
+    "category": "budget_advice"
+  },
+  {
+    "id": 3,
+    "query": "I want to save $15,000 for a house down payment. How long will it take?",
+    "expected_intent": "goal_setting",
+    "expected_contains": ["month", "save", "timeline"],
+    "category": "goal_setting"
+  },
+  {
+    "id": 4,
+    "query": "What's the 50/30/20 rule?",
+    "expected_intent": "general_qa",
+    "expected_contains": ["50", "30", "20", "needs", "wants"],
+    "category": "general_knowledge"
+  },
+  {
+    "id": 5,
+    "query": "Am I spending too much on subscriptions?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["subscription", "month"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 6,
+    "query": "How can I reduce my grocery expenses?",
+    "expected_intent": "savings_advice",
+    "expected_contains": ["grocery", "save", "meal"],
+    "category": "savings_tips"
+  },
+  {
+    "id": 7,
+    "query": "What's my savings rate this month?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["savings rate", "percent"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 8,
+    "query": "Should I use the snowball or avalanche method for my debt?",
+    "expected_intent": "general_qa",
+    "expected_contains": ["snowball", "avalanche", "interest"],
+    "category": "general_knowledge"
+  },
+  {
+    "id": 9,
+    "query": "Create a budget plan for me",
+    "expected_intent": "budget_analysis",
+    "expected_contains": ["budget", "income", "expenses"],
+    "category": "budget_advice"
+  },
+  {
+    "id": 10,
+    "query": "How much should my emergency fund be?",
+    "expected_intent": "savings_advice",
+    "expected_contains": ["emergency", "months", "expenses"],
+    "category": "savings_tips"
+  },
+  {
+    "id": 11,
+    "query": "What are my top 5 biggest expenses?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["top", "spend"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 12,
+    "query": "I need to cut $500 from my monthly budget. Where should I start?",
+    "expected_intent": "budget_analysis",
+    "expected_contains": ["cut", "reduce", "suggest"],
+    "category": "budget_advice"
+  },
+  {
+    "id": 13,
+    "query": "How much am I spending on Uber Eats per month?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["uber eats", "month"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 14,
+    "query": "Set a goal to save $1000 in the next 3 months",
+    "expected_intent": "goal_setting",
+    "expected_contains": ["1000", "3 months", "save"],
+    "category": "goal_setting"
+  },
+  {
+    "id": 15,
+    "query": "What's the difference between a Roth IRA and a traditional IRA?",
+    "expected_intent": "general_qa",
+    "expected_contains": ["roth", "traditional", "tax"],
+    "category": "general_knowledge"
+  },
+  {
+    "id": 16,
+    "query": "My rent is $1,800. Is that too high for my income?",
+    "expected_intent": "budget_analysis",
+    "expected_contains": ["rent", "income", "percent", "30"],
+    "category": "budget_advice"
+  },
+  {
+    "id": 17,
+    "query": "How can I start investing with small amounts?",
+    "expected_intent": "savings_advice",
+    "expected_contains": ["invest", "start"],
+    "category": "savings_tips"
+  },
+  {
+    "id": 18,
+    "query": "Compare my spending this month vs last month",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["month", "compare", "change"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 19,
+    "query": "What subscriptions am I paying for?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["subscription"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 20,
+    "query": "Help me create a plan to be debt-free in 2 years",
+    "expected_intent": "goal_setting",
+    "expected_contains": ["debt", "plan", "year"],
+    "category": "goal_setting"
+  },
+  {
+    "id": 21,
+    "query": "Is my spending on entertainment reasonable?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["entertainment", "percent", "benchmark"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 22,
+    "query": "What's the latte factor and how does it apply to me?",
+    "expected_intent": "general_qa",
+    "expected_contains": ["latte", "small", "daily", "compound"],
+    "category": "general_knowledge"
+  },
+  {
+    "id": 23,
+    "query": "Suggest ways to increase my savings rate to 25%",
+    "expected_intent": "savings_advice",
+    "expected_contains": ["savings rate", "25", "reduce"],
+    "category": "savings_tips"
+  },
+  {
+    "id": 24,
+    "query": "How does my spending compare to recommended benchmarks?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["benchmark", "percent", "recommend"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 25,
+    "query": "I got a $500 raise. How should I allocate it?",
+    "expected_intent": "budget_analysis",
+    "expected_contains": ["raise", "allocate", "save"],
+    "category": "budget_advice"
+  },
+  {
+    "id": 26,
+    "query": "What's zero-based budgeting and should I use it?",
+    "expected_intent": "general_qa",
+    "expected_contains": ["zero-based", "every dollar", "assign"],
+    "category": "general_knowledge"
+  },
+  {
+    "id": 27,
+    "query": "How much do I spend on transportation each month?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["transportation", "month"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 28,
+    "query": "I want to build a 6-month emergency fund. Give me a plan.",
+    "expected_intent": "goal_setting",
+    "expected_contains": ["emergency", "6 month", "plan"],
+    "category": "goal_setting"
+  },
+  {
+    "id": 29,
+    "query": "Should I pay off my credit card or invest first?",
+    "expected_intent": "savings_advice",
+    "expected_contains": ["credit card", "interest", "invest"],
+    "category": "savings_tips"
+  },
+  {
+    "id": 30,
+    "query": "Categorize my last 10 transactions for me",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["categor"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 31,
+    "query": "What financial red flags do you see in my spending?",
+    "expected_intent": "spending_insights",
+    "expected_contains": ["concern", "flag", "exceed"],
+    "category": "spending_analysis"
+  },
+  {
+    "id": 32,
+    "query": "How much should I spend on groceries for a family of one?",
+    "expected_intent": "budget_analysis",
+    "expected_contains": ["grocery", "budget", "recommend"],
+    "category": "budget_advice"
+  },
+  {
+    "id": 33,
+    "query": "Track my progress toward my savings goal",
+    "expected_intent": "goal_setting",
+    "expected_contains": ["progress", "goal", "save"],
+    "category": "goal_setting"
+  },
+  {
+    "id": 34,
+    "query": "What are sinking funds and how should I use them?",
+    "expected_intent": "general_qa",
+    "expected_contains": ["sinking fund", "set aside", "irregular"],
+    "category": "general_knowledge"
+  },
+  {
+    "id": 35,
+    "query": "Give me a weekly spending limit for each category",
+    "expected_intent": "budget_analysis",
+    "expected_contains": ["weekly", "limit", "category"],
+    "category": "budget_advice"
+  }
+]

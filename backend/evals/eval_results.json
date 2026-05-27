@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-05-26T23:26:49.891079",
+  "dataset_size": 15,
+  "model": "gpt-4o",
+  "metrics": {
+    "intent_accuracy": {
+      "metric": "intent_accuracy",
+      "score": 0.8,
+      "correct": 12,
+      "total": 15,
+      "incorrect_cases": [
+        {
+          "id": 1,
+          "expected": "spending_insights",
+          "actual": "budget_analysis"
+        },
+        {
+          "id": 7,
+          "expected": "spending_insights",
+          "actual": "savings_advice"
+        },
+        {
+          "id": 8,
+          "expected": "general_qa",
+          "actual": "savings_advice"
+        }
+      ]
+    },
+    "keyword_faithfulness": {
+      "metric": "keyword_faithfulness",
+      "average_score": 0.922,
+      "description": "Fraction of expected keywords found in responses"
+    },
+    "response_relevance": {
+      "metric": "response_relevance",
+      "average_score": 3.93,
+      "max_possible": 5,
+      "normalized_score": 0.787,
+      "score_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 12,
+        "5": 1
+      },
+      "low_scoring": []
+    }
+  },
+  "average_latency": 5.56
+}

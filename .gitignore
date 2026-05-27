@@ -1,0 +1,18 @@
+.env
+__pycache__/
+*.pyc
+.chroma/
+chroma_db/
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+node_modules/
+.streamlit/secrets.toml
+*.pdf
+FinMate - AI Finance Assistant.html
+FinMate - AI Finance Assistant_files/
+frontend/.next/
+frontend/.env.local
+data/sample_transactions/monthly_summary.csv

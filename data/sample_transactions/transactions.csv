@@ -1,0 +1,316 @@
+date,merchant,category,amount,type,description
+2026-05-26,Chipotle,Restaurants,-24.32,debit,Payment to Chipotle
+2026-05-25,Costco,Groceries,-127.04,debit,Payment to Costco
+2026-05-25,Uber,Transportation,-48.6,debit,Payment to Uber
+2026-05-25,Apple Store,Shopping,-62.58,debit,Payment to Apple Store
+2026-05-24,Book Store,Entertainment,-41.46,debit,Payment to Book Store
+2026-05-24,City Parking,Transportation,-37.89,debit,Payment to City Parking
+2026-05-24,Uber Eats,Restaurants,-23.15,debit,Payment to Uber Eats
+2026-05-23,Lyft,Transportation,-41.46,debit,Payment to Lyft
+2026-05-23,Trader Joe's,Groceries,-34.12,debit,Payment to Trader Joe's
+2026-05-23,Trader Joe's,Groceries,-37.23,debit,Payment to Trader Joe's
+2026-05-21,Uber Eats,Restaurants,-36.95,debit,Payment to Uber Eats
+2026-05-21,DoorDash,Restaurants,-8.59,debit,Payment to DoorDash
+2026-05-20,City Parking,Transportation,-29.83,debit,Payment to City Parking
+2026-05-20,Whole Foods,Groceries,-120.55,debit,Payment to Whole Foods
+2026-05-19,Safeway,Groceries,-72.6,debit,Payment to Safeway
+2026-05-19,Whole Foods,Groceries,-136.47,debit,Payment to Whole Foods
+2026-05-19,Dental Care,Healthcare,-95.57,debit,Payment to Dental Care
+2026-05-18,Book Store,Entertainment,-42.5,debit,Payment to Book Store
+2026-05-18,Sushi Place,Restaurants,-29.85,debit,Payment to Sushi Place
+2026-05-17,Uber,Transportation,-16.54,debit,Payment to Uber
+2026-05-16,Lyft,Transportation,-21.64,debit,Payment to Lyft
+2026-05-15,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-05-15,Cloud Storage,Subscriptions,-9.99,debit,Payment to Cloud Storage
+2026-05-15,AMC Theaters,Entertainment,-22.44,debit,Payment to AMC Theaters
+2026-05-15,Local Bistro,Restaurants,-43.27,debit,Payment to Local Bistro
+2026-05-14,DoorDash,Restaurants,-11.24,debit,Payment to DoorDash
+2026-05-14,McDonald's,Restaurants,-42.49,debit,Payment to McDonald's
+2026-05-14,Sushi Place,Restaurants,-12.96,debit,Payment to Sushi Place
+2026-05-12,Water Utility,Utilities,-38.25,debit,Payment to Water Utility
+2026-05-12,Sushi Place,Restaurants,-41.24,debit,Payment to Sushi Place
+2026-05-11,Lyft,Transportation,-58.66,debit,Payment to Lyft
+2026-05-10,Mobile Carrier,Utilities,-58.51,debit,Payment to Mobile Carrier
+2026-05-10,Book Store,Entertainment,-44.52,debit,Payment to Book Store
+2026-05-09,Zara,Shopping,-77.82,debit,Payment to Zara
+2026-05-08,Bowling Alley,Entertainment,-70.34,debit,Payment to Bowling Alley
+2026-05-08,Internet Provider,Utilities,-59.99,debit,Payment to Internet Provider
+2026-05-08,Starbucks,Restaurants,-21.11,debit,Payment to Starbucks
+2026-05-07,Lyft,Transportation,-54.29,debit,Payment to Lyft
+2026-05-07,Apple Store,Shopping,-131.37,debit,Payment to Apple Store
+2026-05-07,Spotify,Subscriptions,-10.99,debit,Payment to Spotify
+2026-05-05,Electric Company,Utilities,-89.21,debit,Payment to Electric Company
+2026-05-04,City Pharmacy,Healthcare,-54.99,debit,Payment to City Pharmacy
+2026-05-04,Apple Store,Shopping,-64.29,debit,Payment to Apple Store
+2026-05-04,Apple Store,Shopping,-143.25,debit,Payment to Apple Store
+2026-05-03,Netflix,Subscriptions,-15.99,debit,Payment to Netflix
+2026-05-01,Gym Membership,Subscriptions,-45.0,debit,Payment to Gym Membership
+2026-05-01,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-05-01,Rent Payment,Housing,-1600.0,debit,Payment to Rent Payment
+2026-04-28,Pizza Hut,Restaurants,-33.3,debit,Payment to Pizza Hut
+2026-04-27,Pizza Hut,Restaurants,-26.31,debit,Payment to Pizza Hut
+2026-04-26,Pizza Hut,Restaurants,-42.04,debit,Payment to Pizza Hut
+2026-04-25,AMC Theaters,Entertainment,-75.34,debit,Payment to AMC Theaters
+2026-04-25,Target,Groceries,-83.15,debit,Payment to Target
+2026-04-25,Pizza Hut,Restaurants,-30.42,debit,Payment to Pizza Hut
+2026-04-25,Chipotle,Restaurants,-48.27,debit,Payment to Chipotle
+2026-04-24,Local Bistro,Restaurants,-30.95,debit,Payment to Local Bistro
+2026-04-24,Book Store,Entertainment,-19.17,debit,Payment to Book Store
+2026-04-23,Costco,Groceries,-53.14,debit,Payment to Costco
+2026-04-18,Safeway,Groceries,-74.89,debit,Payment to Safeway
+2026-04-15,Cloud Storage,Subscriptions,-9.99,debit,Payment to Cloud Storage
+2026-04-15,Lyft,Transportation,-29.89,debit,Payment to Lyft
+2026-04-15,Apple Store,Shopping,-78.94,debit,Payment to Apple Store
+2026-04-15,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-04-13,Lyft,Transportation,-51.86,debit,Payment to Lyft
+2026-04-13,BP Gas Station,Transportation,-41.91,debit,Payment to BP Gas Station
+2026-04-13,Trader Joe's,Groceries,-109.77,debit,Payment to Trader Joe's
+2026-04-13,DoorDash,Restaurants,-39.44,debit,Payment to DoorDash
+2026-04-12,Uber Eats,Restaurants,-43.41,debit,Payment to Uber Eats
+2026-04-12,Steam Games,Entertainment,-67.01,debit,Payment to Steam Games
+2026-04-12,Water Utility,Utilities,-33.23,debit,Payment to Water Utility
+2026-04-11,Costco,Groceries,-132.16,debit,Payment to Costco
+2026-04-10,Mobile Carrier,Utilities,-52.35,debit,Payment to Mobile Carrier
+2026-04-09,Pizza Hut,Restaurants,-30.83,debit,Payment to Pizza Hut
+2026-04-09,City Parking,Transportation,-29.35,debit,Payment to City Parking
+2026-04-09,AMC Theaters,Entertainment,-52.62,debit,Payment to AMC Theaters
+2026-04-08,Costco,Groceries,-77.78,debit,Payment to Costco
+2026-04-08,Internet Provider,Utilities,-64.67,debit,Payment to Internet Provider
+2026-04-08,Nike,Shopping,-128.92,debit,Payment to Nike
+2026-04-08,Steam Games,Entertainment,-82.14,debit,Payment to Steam Games
+2026-04-07,Spotify,Subscriptions,-10.99,debit,Payment to Spotify
+2026-04-06,Dental Care,Healthcare,-96.98,debit,Payment to Dental Care
+2026-04-05,City Parking,Transportation,-21.63,debit,Payment to City Parking
+2026-04-05,Electric Company,Utilities,-89.14,debit,Payment to Electric Company
+2026-04-05,BP Gas Station,Transportation,-40.31,debit,Payment to BP Gas Station
+2026-04-04,IKEA,Shopping,-237.98,debit,Payment to IKEA
+2026-04-03,Netflix,Subscriptions,-15.99,debit,Payment to Netflix
+2026-04-03,Safeway,Groceries,-73.91,debit,Payment to Safeway
+2026-04-03,Trader Joe's,Groceries,-43.1,debit,Payment to Trader Joe's
+2026-04-01,Shell Gas,Transportation,-46.07,debit,Payment to Shell Gas
+2026-04-01,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-04-01,Rent Payment,Housing,-1600.0,debit,Payment to Rent Payment
+2026-04-01,Gym Membership,Subscriptions,-45.0,debit,Payment to Gym Membership
+2026-03-28,Amazon,Shopping,-124.99,debit,Payment to Amazon
+2026-03-28,Starbucks,Restaurants,-41.83,debit,Payment to Starbucks
+2026-03-28,AMC Theaters,Entertainment,-77.27,debit,Payment to AMC Theaters
+2026-03-27,Chipotle,Restaurants,-22.28,debit,Payment to Chipotle
+2026-03-26,McDonald's,Restaurants,-38.97,debit,Payment to McDonald's
+2026-03-26,Uber,Transportation,-19.81,debit,Payment to Uber
+2026-03-26,Best Buy,Shopping,-173.54,debit,Payment to Best Buy
+2026-03-26,Target,Groceries,-107.42,debit,Payment to Target
+2026-03-25,Local Bistro,Restaurants,-39.62,debit,Payment to Local Bistro
+2026-03-25,Best Buy,Shopping,-160.91,debit,Payment to Best Buy
+2026-03-24,Trader Joe's,Groceries,-68.71,debit,Payment to Trader Joe's
+2026-03-23,Safeway,Groceries,-25.2,debit,Payment to Safeway
+2026-03-23,City Parking,Transportation,-38.2,debit,Payment to City Parking
+2026-03-22,Pizza Hut,Restaurants,-39.83,debit,Payment to Pizza Hut
+2026-03-21,BP Gas Station,Transportation,-22.31,debit,Payment to BP Gas Station
+2026-03-20,Shell Gas,Transportation,-36.14,debit,Payment to Shell Gas
+2026-03-20,DoorDash,Restaurants,-29.85,debit,Payment to DoorDash
+2026-03-19,Trader Joe's,Groceries,-55.57,debit,Payment to Trader Joe's
+2026-03-18,Dr. Smith Office,Healthcare,-136.12,debit,Payment to Dr. Smith Office
+2026-03-18,IKEA,Shopping,-92.98,debit,Payment to IKEA
+2026-03-18,McDonald's,Restaurants,-17.02,debit,Payment to McDonald's
+2026-03-17,Dr. Smith Office,Healthcare,-127.13,debit,Payment to Dr. Smith Office
+2026-03-17,Whole Foods,Groceries,-71.22,debit,Payment to Whole Foods
+2026-03-15,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-03-15,Local Bistro,Restaurants,-32.03,debit,Payment to Local Bistro
+2026-03-15,Cloud Storage,Subscriptions,-9.99,debit,Payment to Cloud Storage
+2026-03-12,Costco,Groceries,-77.37,debit,Payment to Costco
+2026-03-12,Water Utility,Utilities,-38.24,debit,Payment to Water Utility
+2026-03-11,Pizza Hut,Restaurants,-40.77,debit,Payment to Pizza Hut
+2026-03-10,Mobile Carrier,Utilities,-51.46,debit,Payment to Mobile Carrier
+2026-03-10,Uber Eats,Restaurants,-39.34,debit,Payment to Uber Eats
+2026-03-10,DoorDash,Restaurants,-12.39,debit,Payment to DoorDash
+2026-03-08,Internet Provider,Utilities,-71.12,debit,Payment to Internet Provider
+2026-03-08,Steam Games,Entertainment,-79.33,debit,Payment to Steam Games
+2026-03-07,Spotify,Subscriptions,-10.99,debit,Payment to Spotify
+2026-03-07,Pizza Hut,Restaurants,-44.93,debit,Payment to Pizza Hut
+2026-03-06,Uber Eats,Restaurants,-27.09,debit,Payment to Uber Eats
+2026-03-05,AMC Theaters,Entertainment,-86.41,debit,Payment to AMC Theaters
+2026-03-05,Electric Company,Utilities,-78.46,debit,Payment to Electric Company
+2026-03-03,Netflix,Subscriptions,-15.99,debit,Payment to Netflix
+2026-03-03,Costco,Groceries,-99.78,debit,Payment to Costco
+2026-03-02,Uber,Transportation,-64.15,debit,Payment to Uber
+2026-03-02,IKEA,Shopping,-77.32,debit,Payment to IKEA
+2026-03-02,Whole Foods,Groceries,-96.59,debit,Payment to Whole Foods
+2026-03-01,Gym Membership,Subscriptions,-45.0,debit,Payment to Gym Membership
+2026-03-01,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-03-01,Rent Payment,Housing,-1600.0,debit,Payment to Rent Payment
+2026-02-28,Costco,Groceries,-85.65,debit,Payment to Costco
+2026-02-28,Nike,Shopping,-71.27,debit,Payment to Nike
+2026-02-28,Bowling Alley,Entertainment,-32.79,debit,Payment to Bowling Alley
+2026-02-27,Target,Groceries,-60.93,debit,Payment to Target
+2026-02-27,DoorDash,Restaurants,-35.38,debit,Payment to DoorDash
+2026-02-26,Uber,Transportation,-58.72,debit,Payment to Uber
+2026-02-26,Chipotle,Restaurants,-50.25,debit,Payment to Chipotle
+2026-02-26,Target,Groceries,-25.94,debit,Payment to Target
+2026-02-25,BP Gas Station,Transportation,-58.86,debit,Payment to BP Gas Station
+2026-02-25,McDonald's,Restaurants,-37.94,debit,Payment to McDonald's
+2026-02-25,Zara,Shopping,-100.76,debit,Payment to Zara
+2026-02-23,McDonald's,Restaurants,-33.64,debit,Payment to McDonald's
+2026-02-22,Whole Foods,Groceries,-137.67,debit,Payment to Whole Foods
+2026-02-22,Nike,Shopping,-111.65,debit,Payment to Nike
+2026-02-18,Dr. Smith Office,Healthcare,-141.8,debit,Payment to Dr. Smith Office
+2026-02-18,Pizza Hut,Restaurants,-34.36,debit,Payment to Pizza Hut
+2026-02-15,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-02-15,Cloud Storage,Subscriptions,-9.99,debit,Payment to Cloud Storage
+2026-02-14,BP Gas Station,Transportation,-51.72,debit,Payment to BP Gas Station
+2026-02-14,Costco,Groceries,-30.29,debit,Payment to Costco
+2026-02-13,Dental Care,Healthcare,-147.46,debit,Payment to Dental Care
+2026-02-12,Zara,Shopping,-208.72,debit,Payment to Zara
+2026-02-12,Water Utility,Utilities,-36.42,debit,Payment to Water Utility
+2026-02-11,City Parking,Transportation,-54.52,debit,Payment to City Parking
+2026-02-11,Trader Joe's,Groceries,-107.5,debit,Payment to Trader Joe's
+2026-02-10,DoorDash,Restaurants,-50.25,debit,Payment to DoorDash
+2026-02-10,Mobile Carrier,Utilities,-58.67,debit,Payment to Mobile Carrier
+2026-02-10,Target,Groceries,-50.28,debit,Payment to Target
+2026-02-09,Target,Shopping,-35.97,debit,Payment to Target
+2026-02-09,McDonald's,Restaurants,-42.84,debit,Payment to McDonald's
+2026-02-09,Steam Games,Entertainment,-77.99,debit,Payment to Steam Games
+2026-02-09,Whole Foods,Groceries,-36.08,debit,Payment to Whole Foods
+2026-02-08,Internet Provider,Utilities,-60.55,debit,Payment to Internet Provider
+2026-02-08,Uber,Transportation,-63.74,debit,Payment to Uber
+2026-02-07,Spotify,Subscriptions,-10.99,debit,Payment to Spotify
+2026-02-07,Local Bistro,Restaurants,-39.35,debit,Payment to Local Bistro
+2026-02-05,Pizza Hut,Restaurants,-13.99,debit,Payment to Pizza Hut
+2026-02-05,Electric Company,Utilities,-82.78,debit,Payment to Electric Company
+2026-02-05,Costco,Groceries,-38.85,debit,Payment to Costco
+2026-02-04,Target,Groceries,-43.65,debit,Payment to Target
+2026-02-04,Bowling Alley,Entertainment,-84.77,debit,Payment to Bowling Alley
+2026-02-04,Starbucks,Restaurants,-52.42,debit,Payment to Starbucks
+2026-02-03,Netflix,Subscriptions,-15.99,debit,Payment to Netflix
+2026-02-01,Gym Membership,Subscriptions,-45.0,debit,Payment to Gym Membership
+2026-02-01,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-02-01,Uber,Transportation,-51.04,debit,Payment to Uber
+2026-02-01,Rent Payment,Housing,-1600.0,debit,Payment to Rent Payment
+2026-01-28,Whole Foods,Groceries,-78.18,debit,Payment to Whole Foods
+2026-01-28,Starbucks,Restaurants,-10.38,debit,Payment to Starbucks
+2026-01-26,Sushi Place,Restaurants,-21.41,debit,Payment to Sushi Place
+2026-01-25,Local Bistro,Restaurants,-15.82,debit,Payment to Local Bistro
+2026-01-25,AMC Theaters,Entertainment,-15.75,debit,Payment to AMC Theaters
+2026-01-24,Costco,Groceries,-121.07,debit,Payment to Costco
+2026-01-23,Sushi Place,Restaurants,-15.28,debit,Payment to Sushi Place
+2026-01-22,BP Gas Station,Transportation,-41.96,debit,Payment to BP Gas Station
+2026-01-22,Concert Venue,Entertainment,-51.58,debit,Payment to Concert Venue
+2026-01-22,Whole Foods,Groceries,-32.27,debit,Payment to Whole Foods
+2026-01-20,Book Store,Entertainment,-94.69,debit,Payment to Book Store
+2026-01-19,Uber,Transportation,-42.68,debit,Payment to Uber
+2026-01-19,Chipotle,Restaurants,-43.15,debit,Payment to Chipotle
+2026-01-18,Safeway,Groceries,-41.82,debit,Payment to Safeway
+2026-01-18,Nike,Shopping,-136.35,debit,Payment to Nike
+2026-01-18,Chipotle,Restaurants,-53.54,debit,Payment to Chipotle
+2026-01-17,McDonald's,Restaurants,-10.67,debit,Payment to McDonald's
+2026-01-17,Starbucks,Restaurants,-48.01,debit,Payment to Starbucks
+2026-01-16,Sushi Place,Restaurants,-18.05,debit,Payment to Sushi Place
+2026-01-15,Cloud Storage,Subscriptions,-9.99,debit,Payment to Cloud Storage
+2026-01-15,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-01-13,Shell Gas,Transportation,-61.9,debit,Payment to Shell Gas
+2026-01-13,Chipotle,Restaurants,-15.74,debit,Payment to Chipotle
+2026-01-12,Water Utility,Utilities,-34.38,debit,Payment to Water Utility
+2026-01-11,Lyft,Transportation,-22.83,debit,Payment to Lyft
+2026-01-10,Mobile Carrier,Utilities,-53.4,debit,Payment to Mobile Carrier
+2026-01-10,Local Bistro,Restaurants,-53.53,debit,Payment to Local Bistro
+2026-01-08,Internet Provider,Utilities,-67.07,debit,Payment to Internet Provider
+2026-01-08,Concert Venue,Entertainment,-46.66,debit,Payment to Concert Venue
+2026-01-07,Spotify,Subscriptions,-10.99,debit,Payment to Spotify
+2026-01-06,Costco,Groceries,-80.52,debit,Payment to Costco
+2026-01-05,Zara,Shopping,-222.6,debit,Payment to Zara
+2026-01-05,Electric Company,Utilities,-78.1,debit,Payment to Electric Company
+2026-01-04,Trader Joe's,Groceries,-47.99,debit,Payment to Trader Joe's
+2026-01-03,Starbucks,Restaurants,-39.73,debit,Payment to Starbucks
+2026-01-03,Netflix,Subscriptions,-15.99,debit,Payment to Netflix
+2026-01-02,BP Gas Station,Transportation,-16.35,debit,Payment to BP Gas Station
+2026-01-02,Chipotle,Restaurants,-35.46,debit,Payment to Chipotle
+2026-01-01,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2026-01-01,Pizza Hut,Restaurants,-20.46,debit,Payment to Pizza Hut
+2026-01-01,Rent Payment,Housing,-1600.0,debit,Payment to Rent Payment
+2026-01-01,Gym Membership,Subscriptions,-45.0,debit,Payment to Gym Membership
+2025-12-28,Whole Foods,Groceries,-106.63,debit,Payment to Whole Foods
+2025-12-28,Concert Venue,Entertainment,-20.67,debit,Payment to Concert Venue
+2025-12-26,Best Buy,Shopping,-205.72,debit,Payment to Best Buy
+2025-12-25,Uber,Transportation,-49.79,debit,Payment to Uber
+2025-12-25,McDonald's,Restaurants,-31.86,debit,Payment to McDonald's
+2025-12-25,McDonald's,Restaurants,-33.35,debit,Payment to McDonald's
+2025-12-25,Chipotle,Restaurants,-36.15,debit,Payment to Chipotle
+2025-12-24,Uber Eats,Restaurants,-53.68,debit,Payment to Uber Eats
+2025-12-21,DoorDash,Restaurants,-13.24,debit,Payment to DoorDash
+2025-12-21,Shell Gas,Transportation,-24.13,debit,Payment to Shell Gas
+2025-12-19,IKEA,Shopping,-128.71,debit,Payment to IKEA
+2025-12-19,BP Gas Station,Transportation,-24.2,debit,Payment to BP Gas Station
+2025-12-18,McDonald's,Restaurants,-14.03,debit,Payment to McDonald's
+2025-12-18,Nike,Shopping,-186.37,debit,Payment to Nike
+2025-12-17,City Parking,Transportation,-18.41,debit,Payment to City Parking
+2025-12-17,Local Bistro,Restaurants,-15.18,debit,Payment to Local Bistro
+2025-12-17,Costco,Groceries,-141.53,debit,Payment to Costco
+2025-12-16,McDonald's,Restaurants,-20.46,debit,Payment to McDonald's
+2025-12-16,Starbucks,Restaurants,-53.97,debit,Payment to Starbucks
+2025-12-16,Chipotle,Restaurants,-13.26,debit,Payment to Chipotle
+2025-12-15,Cloud Storage,Subscriptions,-9.99,debit,Payment to Cloud Storage
+2025-12-15,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2025-12-14,Target,Groceries,-32.62,debit,Payment to Target
+2025-12-14,McDonald's,Restaurants,-29.33,debit,Payment to McDonald's
+2025-12-14,Uber,Transportation,-61.23,debit,Payment to Uber
+2025-12-13,Target,Groceries,-144.53,debit,Payment to Target
+2025-12-13,Lyft,Transportation,-35.22,debit,Payment to Lyft
+2025-12-12,Water Utility,Utilities,-36.79,debit,Payment to Water Utility
+2025-12-12,Uber Eats,Restaurants,-19.25,debit,Payment to Uber Eats
+2025-12-10,Mobile Carrier,Utilities,-54.93,debit,Payment to Mobile Carrier
+2025-12-08,Shell Gas,Transportation,-29.92,debit,Payment to Shell Gas
+2025-12-08,Starbucks,Restaurants,-12.03,debit,Payment to Starbucks
+2025-12-08,Internet Provider,Utilities,-60.3,debit,Payment to Internet Provider
+2025-12-08,Concert Venue,Entertainment,-68.52,debit,Payment to Concert Venue
+2025-12-08,Shell Gas,Transportation,-15.76,debit,Payment to Shell Gas
+2025-12-07,Spotify,Subscriptions,-10.99,debit,Payment to Spotify
+2025-12-05,Trader Joe's,Groceries,-120.05,debit,Payment to Trader Joe's
+2025-12-05,Electric Company,Utilities,-93.45,debit,Payment to Electric Company
+2025-12-04,Target,Groceries,-115.11,debit,Payment to Target
+2025-12-04,Uber Eats,Restaurants,-47.56,debit,Payment to Uber Eats
+2025-12-03,Netflix,Subscriptions,-15.99,debit,Payment to Netflix
+2025-12-01,Gym Membership,Subscriptions,-45.0,debit,Payment to Gym Membership
+2025-12-01,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2025-12-01,Rent Payment,Housing,-1600.0,debit,Payment to Rent Payment
+2025-11-28,Local Bistro,Restaurants,-48.72,debit,Payment to Local Bistro
+2025-11-27,DoorDash,Restaurants,-15.64,debit,Payment to DoorDash
+2025-11-27,DoorDash,Restaurants,-35.14,debit,Payment to DoorDash
+2025-11-26,Concert Venue,Entertainment,-47.09,debit,Payment to Concert Venue
+2025-11-25,DoorDash,Restaurants,-12.8,debit,Payment to DoorDash
+2025-11-24,Sushi Place,Restaurants,-33.2,debit,Payment to Sushi Place
+2025-11-23,Starbucks,Restaurants,-10.15,debit,Payment to Starbucks
+2025-11-22,Target,Groceries,-35.43,debit,Payment to Target
+2025-11-21,Target,Groceries,-75.34,debit,Payment to Target
+2025-11-21,Best Buy,Shopping,-52.86,debit,Payment to Best Buy
+2025-11-20,Uber,Transportation,-40.31,debit,Payment to Uber
+2025-11-19,Dr. Smith Office,Healthcare,-63.87,debit,Payment to Dr. Smith Office
+2025-11-18,Zara,Shopping,-191.81,debit,Payment to Zara
+2025-11-15,Cloud Storage,Subscriptions,-9.99,debit,Payment to Cloud Storage
+2025-11-15,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2025-11-15,Target,Groceries,-58.38,debit,Payment to Target
+2025-11-14,Whole Foods,Groceries,-28.58,debit,Payment to Whole Foods
+2025-11-13,Starbucks,Restaurants,-24.87,debit,Payment to Starbucks
+2025-11-13,Uber Eats,Restaurants,-29.31,debit,Payment to Uber Eats
+2025-11-13,Starbucks,Restaurants,-33.95,debit,Payment to Starbucks
+2025-11-12,Water Utility,Utilities,-33.06,debit,Payment to Water Utility
+2025-11-12,Uber Eats,Restaurants,-45.94,debit,Payment to Uber Eats
+2025-11-12,Local Bistro,Restaurants,-39.5,debit,Payment to Local Bistro
+2025-11-11,Shell Gas,Transportation,-24.14,debit,Payment to Shell Gas
+2025-11-11,Uber Eats,Restaurants,-15.31,debit,Payment to Uber Eats
+2025-11-10,Mobile Carrier,Utilities,-52.53,debit,Payment to Mobile Carrier
+2025-11-09,BP Gas Station,Transportation,-23.64,debit,Payment to BP Gas Station
+2025-11-08,Internet Provider,Utilities,-58.83,debit,Payment to Internet Provider
+2025-11-08,Uber,Transportation,-36.5,debit,Payment to Uber
+2025-11-08,Uber Eats,Restaurants,-54.31,debit,Payment to Uber Eats
+2025-11-07,Trader Joe's,Groceries,-85.64,debit,Payment to Trader Joe's
+2025-11-07,Spotify,Subscriptions,-10.99,debit,Payment to Spotify
+2025-11-07,Apple Store,Shopping,-134.82,debit,Payment to Apple Store
+2025-11-05,Electric Company,Utilities,-87.37,debit,Payment to Electric Company
+2025-11-05,Nike,Shopping,-191.35,debit,Payment to Nike
+2025-11-03,Netflix,Subscriptions,-15.99,debit,Payment to Netflix
+2025-11-03,Steam Games,Entertainment,-88.05,debit,Payment to Steam Games
+2025-11-01,Target,Groceries,-48.86,debit,Payment to Target
+2025-11-01,McDonald's,Restaurants,-40.81,debit,Payment to McDonald's
+2025-11-01,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
+2025-11-01,Gym Membership,Subscriptions,-45.0,debit,Payment to Gym Membership
+2025-11-01,Rent Payment,Housing,-1600.0,debit,Payment to Rent Payment
+2026-05-26,Walmart,Groceries,-30.0,debit,Payment to Walmart

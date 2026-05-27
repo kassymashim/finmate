@@ -1,0 +1,14 @@
+{
+  "name": "Alex Johnson",
+  "age": 29,
+  "occupation": "Software Engineer",
+  "monthly_income": 5800,
+  "savings_goal": 15000,
+  "current_savings": 4200,
+  "financial_goals": [
+    "Build 6-month emergency fund",
+    "Save for down payment on apartment",
+    "Reduce dining out expenses by 30%"
+  ],
+  "risk_tolerance": "moderate"
+}
