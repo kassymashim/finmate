@@ -4,7 +4,7 @@ echo   FinMate - AI Personal Finance Assistant
 echo ============================================
 echo.
 echo Starting backend API server...
-start "FinMate Backend" cmd /k "cd /d %~dp0 && python -m uvicorn backend.api:app --host 0.0.0.0 --port 8003"
+start "FinMate Backend" cmd /k "cd /d %~dp0 && python -m uvicorn backend.api:app --host 0.0.0.0 --port 8003 --reload"
 
 echo Waiting for backend to start...
 timeout /t 5 /nobreak >nul

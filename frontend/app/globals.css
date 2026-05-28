@@ -16,7 +16,7 @@
   --warning: #f59e0b;
 }
 
-body {
+html, body {
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;

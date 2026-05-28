@@ -313,4 +313,5 @@ date,merchant,category,amount,type,description
 2025-11-01,Employer - TechCorp Inc,Income,2900.0,credit,Payment from Employer - TechCorp Inc
 2025-11-01,Gym Membership,Subscriptions,-45.0,debit,Payment to Gym Membership
 2025-11-01,Rent Payment,Housing,-1600.0,debit,Payment to Rent Payment
-2026-05-26,Walmart,Groceries,-30.0,debit,Payment to Walmart
+2026-05-28,Walmart,Groceries,-20.0,debit,Payment to Walmart
+2026-05-28,Levi's Store,Shopping,-106.91,debit,Receipt: Levi's Store

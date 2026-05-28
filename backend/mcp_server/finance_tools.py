@@ -25,7 +25,7 @@ CATEGORY_KEYWORDS = {
     "Housing": ["rent", "mortgage", "property tax", "home insurance", "hoa"],
     "Utilities": ["electric", "water", "gas bill", "internet", "phone", "mobile", "verizon", "att"],
     "Entertainment": ["netflix", "spotify", "hulu", "disney", "theater", "movie", "concert", "gaming", "steam"],
-    "Shopping": ["amazon", "target", "nike", "zara", "best buy", "apple", "ikea", "nordstrom"],
+    "Shopping": ["amazon", "target", "nike", "zara", "best buy", "apple", "ikea", "nordstrom", "levi", "gap", "h&m", "mall", "clothing", "apparel"],
     "Healthcare": ["pharmacy", "doctor", "dental", "hospital", "medical", "vision", "cvs", "walgreens"],
     "Subscriptions": ["subscription", "membership", "gym", "cloud", "premium"],
     "Income": ["salary", "payroll", "deposit", "employer", "freelance", "dividend", "interest"],

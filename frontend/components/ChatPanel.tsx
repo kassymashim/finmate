@@ -69,9 +69,9 @@ export default function ChatPanel({ profile }: Props) {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-[calc(100vh-140px)]">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 h-[calc(100vh-140px)] overflow-hidden">
       {/* Chat Area */}
-      <div className="lg:col-span-3 bg-[#1e2235] rounded-2xl border border-[#2a2f45] flex flex-col">
+      <div className="lg:col-span-3 bg-[#1e2235] rounded-2xl border border-[#2a2f45] flex flex-col min-h-0">
         {/* Header */}
         <div className="px-6 py-4 border-b border-[#2a2f45]">
           <div className="flex items-center gap-2">
@@ -161,7 +161,7 @@ export default function ChatPanel({ profile }: Props) {
       </div>
 
       {/* Side Panel */}
-      <div className="lg:col-span-1 space-y-4">
+      <div className="lg:col-span-1 space-y-4 overflow-y-auto">
         <div className="bg-[#1e2235] rounded-2xl border border-[#2a2f45] p-5">
           <h3 className="text-sm font-semibold text-slate-300 mb-3">Your Profile</h3>
           <div className="space-y-2 text-xs text-slate-400">

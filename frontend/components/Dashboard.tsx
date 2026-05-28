@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { DashboardData } from "@/app/page";
 import {
   PieChart,
@@ -25,6 +25,9 @@ import {
   Plus,
   Check,
   ChevronDown,
+  Camera,
+  Upload,
+  X,
 } from "lucide-react";
 
 const COLORS: Record<string, string> = {
@@ -112,6 +115,17 @@ export default function Dashboard({ data, onExpenseAdded }: Props) {
   const [showAddExpense, setShowAddExpense] = useState(false);
   const [expenseInput, setExpenseInput] = useState("");
   const [addSuccess, setAddSuccess] = useState<string | null>(null);
+  const [showReceiptUpload, setShowReceiptUpload] = useState(false);
+  const [receiptFile, setReceiptFile] = useState<File | null>(null);
+  const [receiptPreview, setReceiptPreview] = useState<string | null>(null);
+  const [receiptLoading, setReceiptLoading] = useState(false);
+  const [receiptResult, setReceiptResult] = useState<any>(null);
+
+  useEffect(() => {
+    if (availableMonths?.length && selectedMonth && !availableMonths.includes(selectedMonth)) {
+      setSelectedMonth(availableMonths[0]);
+    }
+  }, [availableMonths, selectedMonth]);
 
   // Filter data by selected month, sort newest first
   const filteredTransactions = (allTransactions || recentTransactions)
@@ -172,8 +186,175 @@ export default function Dashboard({ data, onExpenseAdded }: Props) {
     }
   };
 
+  const handleReceiptSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setReceiptFile(file);
+      setReceiptPreview(URL.createObjectURL(file));
+      setReceiptResult(null);
+    }
+  };
+
+  const handleReceiptUpload = async () => {
+    if (!receiptFile) return;
+    setReceiptLoading(true);
+    try {
+      const formData = new FormData();
+      formData.append("file", receiptFile);
+      const res = await fetch("http://localhost:8003/api/receipt", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await res.json();
+      if (!res.ok && !result.error) {
+        result.error = result.detail || "Server error analyzing receipt";
+      }
+      setReceiptResult(result);
+      if (result.saved) {
+        const month = result.transaction_month || result.date?.slice(0, 7);
+        if (month) setSelectedMonth(month);
+        setAddSuccess(
+          `${result.merchant} — $${result.amount} → ${result.category}`
+        );
+        onExpenseAdded();
+        setTimeout(() => {
+          closeReceiptModal();
+          setAddSuccess(null);
+        }, 2500);
+      }
+    } catch {
+      setReceiptResult({ error: "Failed to analyze receipt" });
+    }
+    setReceiptLoading(false);
+  };
+
+  const closeReceiptModal = () => {
+    setShowReceiptUpload(false);
+    setReceiptFile(null);
+    setReceiptPreview(null);
+    setReceiptResult(null);
+  };
+
   return (
     <div className="space-y-6">
+      {/* Receipt Upload Modal */}
+      {showReceiptUpload && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-[#1e2235] rounded-2xl border border-[#2a2f45] w-full max-w-lg p-6 relative">
+            <button
+              onClick={closeReceiptModal}
+              className="absolute top-4 right-4 text-slate-400 hover:text-white"
+            >
+              <X size={20} />
+            </button>
+            <h3 className="text-lg font-semibold text-white mb-1 flex items-center gap-2">
+              <Camera size={20} className="text-indigo-400" />
+              Scan Receipt
+            </h3>
+            <p className="text-xs text-slate-500 mb-4">
+              Upload a receipt photo — GPT-4o Vision will extract and categorize it automatically
+            </p>
+
+            {!receiptFile ? (
+              <label className="flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-[#3a3f55] hover:border-indigo-500/50 rounded-xl cursor-pointer transition-colors bg-[#0f1117]/50">
+                <Upload size={32} className="text-slate-500 mb-2" />
+                <span className="text-sm text-slate-400">Click to upload receipt image</span>
+                <span className="text-xs text-slate-600 mt-1">JPG, PNG, WEBP supported</span>
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleReceiptSelect}
+                  className="hidden"
+                />
+              </label>
+            ) : (
+              <div className="space-y-4">
+                <div className="relative w-full h-48 rounded-xl overflow-hidden bg-[#0f1117]">
+                  <img
+                    src={receiptPreview!}
+                    alt="Receipt preview"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
+                {!receiptResult && !receiptLoading && (
+                  <button
+                    onClick={handleReceiptUpload}
+                    className="w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:opacity-90 rounded-xl text-sm font-semibold text-white transition-opacity"
+                  >
+                    Analyze with GPT-4o Vision
+                  </button>
+                )}
+
+                {receiptLoading && (
+                  <div className="flex items-center justify-center gap-3 py-3">
+                    <div className="w-5 h-5 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
+                    <span className="text-sm text-slate-300">Analyzing receipt...</span>
+                  </div>
+                )}
+
+                {receiptResult?.error && (
+                  <p className="text-sm text-rose-400 text-center px-2">{receiptResult.error}</p>
+                )}
+
+                {receiptResult && !receiptResult.error && !receiptResult.saved && (
+                  <p className="text-sm text-amber-400 text-center px-2">
+                    {receiptResult.save_error ||
+                      "OCR worked but expense was not saved. Close the FinMate Backend window and run start.bat again, then retry."}
+                  </p>
+                )}
+
+                {receiptResult && !receiptResult.error && (
+                  <div className="bg-[#0f1117] rounded-xl border border-[#2a2f45] p-4 space-y-2">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Check size={16} className={receiptResult.saved ? "text-emerald-400" : "text-amber-400"} />
+                      <span className={`text-sm font-semibold ${receiptResult.saved ? "text-emerald-400" : "text-amber-400"}`}>
+                        {receiptResult.saved ? "Receipt Analyzed & Saved!" : "Receipt Analyzed (not saved)"}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-2 text-xs">
+                      <div>
+                        <span className="text-slate-500">Merchant</span>
+                        <p className="text-slate-200 font-medium">{receiptResult.merchant}</p>
+                      </div>
+                      <div>
+                        <span className="text-slate-500">Total</span>
+                        <p className="text-slate-200 font-medium">${receiptResult.total}</p>
+                      </div>
+                      <div>
+                        <span className="text-slate-500">Category</span>
+                        <p className="text-slate-200 font-medium">{receiptResult.category || receiptResult.category_suggestion}</p>
+                      </div>
+                      <div>
+                        <span className="text-slate-500">Date</span>
+                        <p className="text-slate-200 font-medium">{receiptResult.date || "Today"}</p>
+                      </div>
+                    </div>
+                    {receiptResult.items && receiptResult.items.length > 0 && (
+                      <div className="mt-2 pt-2 border-t border-[#2a2f45]">
+                        <span className="text-[11px] text-slate-500 uppercase tracking-wider">Items</span>
+                        <div className="mt-1 space-y-1">
+                          {receiptResult.items.slice(0, 5).map((item: any, i: number) => (
+                            <div key={i} className="flex justify-between text-xs">
+                              <span className="text-slate-400">{item.description}</span>
+                              <span className="text-slate-300">${item.amount}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {receiptResult?.error && (
+                  <p className="text-sm text-rose-400 text-center">{receiptResult.error}</p>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Top Bar: Month Filter + Add Expense */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -220,6 +401,13 @@ export default function Dashboard({ data, onExpenseAdded }: Props) {
               ✓ {addSuccess}
             </span>
           )}
+          <button
+            onClick={() => setShowReceiptUpload(true)}
+            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium bg-[#1e2235] border border-[#2a2f45] hover:border-indigo-500/50 text-slate-300 hover:text-indigo-300 transition-all"
+          >
+            <Camera size={16} />
+            Scan Receipt
+          </button>
           <button
             onClick={() => setShowAddExpense(!showAddExpense)}
             className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all ${
@@ -300,7 +488,7 @@ export default function Dashboard({ data, onExpenseAdded }: Props) {
                 ))}
               </Pie>
               <Tooltip
-                formatter={(value: number) => [`$${value.toLocaleString()}`, ""]}
+                formatter={(value: any) => [`$${Number(value).toLocaleString()}`, ""]}
                 contentStyle={{
                   borderRadius: "12px",
                   border: "1px solid #2a2f45",
@@ -382,7 +570,7 @@ export default function Dashboard({ data, onExpenseAdded }: Props) {
               />
               <YAxis tick={{ fontSize: 10, fill: "#64748b" }} tickFormatter={(v) => `$${v}`} axisLine={{ stroke: "#2a2f45" }} />
               <Tooltip
-                formatter={(value: number) => [`$${value.toFixed(0)}`, "Spent"]}
+                formatter={(value: any) => [`$${Number(value).toFixed(0)}`, "Spent"]}
                 contentStyle={{ borderRadius: "12px", border: "1px solid #2a2f45", backgroundColor: "#1e2235", color: "#f1f5f9" }}
               />
               <Area

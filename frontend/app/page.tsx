@@ -84,7 +84,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0f1117]">
+    <div className={`min-h-screen bg-[#0f1117] ${activeTab === "chat" ? "h-screen overflow-hidden" : ""}`}>
       {/* Header */}
       <header className="sticky top-0 z-50 bg-[#0f1117]/80 backdrop-blur-md border-b border-[#2a2f45]">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
